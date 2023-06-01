@@ -10,5 +10,8 @@ if(isset($_POST['save_task'])){
     if(!$result){
         die("Fallo la consulta");
     }
+    $_SESSION['message']='Tarea Guardada';
+    $_SESSION['message_type']='success';
+
     header("Location: index.php");
 }
