@@ -1,15 +1,26 @@
 <?php include("db.php") ?>
+<?php include("includes/header.php") ?>
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CRUD task</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-  </body>
-</html>
+<div class="container p-4">
+    <div class="row">
+        <div class="col-4">
+            <div class="card card-body">
+                <form action="save_task.php" method="POST">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" name="title" placeholder="Task title" autofocus>
+                    </div>
+                    <div class="mb-3">
+                        <textarea name="description" placeholder="Task Description" class="form-control"></textarea>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <input type="submit" class="btn btn-success" name="save_task" value="Save">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-8">
+            .card>.card-body
+        </div>
+    </div>
+</div>
+<?php include("includes/footer.php") ?>
